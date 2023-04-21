@@ -21,7 +21,6 @@ li_1.extend(li_2)
 print(li_1)
 
 
-
 # li_1과 li_2를 사용하여
 # ["Hello", 1, "World", 2, "Python",3]
 # 를 출력하세요

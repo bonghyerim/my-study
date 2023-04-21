@@ -27,3 +27,4 @@ elif money >= beer and age >= 20:
 elif money >= drink:
     print ("음료수 먹는다.")
 
+
