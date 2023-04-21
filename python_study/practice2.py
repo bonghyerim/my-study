@@ -1,4 +1,4 @@
-"""
+
 li_1 = ["Hello", "World", "Python"]
 # Hellow World Python으로 출력하세요.
 print(li_1[0] , li_1[1] , li_1[2])
@@ -37,8 +37,8 @@ li_1.insert(1, li_2[0])
 li_1.insert(3, li_2[1])
 li_1.append(li_2[2])
 print(li_1)
-"""
-"""
+
+
 scores = [] # scores = list()
 # 비어있는 리스트 생성
 scores.append(int(input("영어 점수 : ")))
@@ -61,7 +61,7 @@ elif  avg >= 61:
     print ("D")
 else:
     print ("F")
-    """
+    
 
 # 나이와 가지고 있는 돈을 입력받는다.
 # 가지고 있는 돈으로 물건을 몇 개 살 수 있는지와 잔돈을 출력한다.
