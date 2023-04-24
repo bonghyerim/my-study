@@ -1,3 +1,5 @@
+
+
 # function 함수
 # 입력 -> 처리 -> 출력
 # input(입력)을 받아서 특정 작업(처리)을 수행하고 output(출력)을 반환한다.
@@ -66,3 +68,54 @@ def print_names():
     print("김민재")
     print("이강인")
     
+# 출력만 주르륵 하고 종료
+# output이 없는 함수
+# print_names()
+
+def get_name():
+    return "bonghyerim"
+# return이 있으면 반환값이 있다
+
+def print_my_name():
+    print(get_name())
+
+print_my_name()
+a = print_names() # 리턴이 없음 
+b = get_name() # 리턴이 있음
+print(a)
+print(b)
+
+
+
+# 매개변수, parameter 함수에 입력하는 값
+# argument 혼용
+
+def add(a, b): 
+    return a + b
+
+
+
+# result = add(1, 2)
+# print(result)
+
+# print_add(1, 2)
+# result = print_add(1, 2)
+# print(result)
+
+def print_add(a, b):
+    print(a + b)
+    
+print_add("안녕", "하세요")
+print_add(b = "하세요",a = "안녕")
+
+def swap_number(a, b):
+    temp = a
+    a = b
+    b = temp
+    print(a, b)
+
+a = 1
+b = 2
+print("함수 호출 전", a, b)
+swap_number(a, b)
+print("함수 호출 후", a, b)
