@@ -251,3 +251,119 @@ print(result)
 print(res_add, res_mul)
 
 # 개수나 용도가 정해지지 않았을 때 *, **
+
+# 홀수 판별 함수
+# 정수 1개를 입력받고 홀수인지 판별하는 함수
+# 함수 이름 : is_odd_number
+# 파라미터 : n
+# 반환값 : 홀수면 True, 짝수면 False
+
+# 1
+def is_odd_number(n):
+    if n % 2 == 1:
+        return True
+    else :
+        return False
+
+# 2
+def is_odd_number(n):
+    if n % 2 == 1:
+        return True
+    return False
+
+# 3
+def is_odd_number(n):
+    return n % 2 == 1
+
+
+# 테두리를 출력하는 함수
+# 문자열을 입력받고 print 함수를 이용해 테두리와 함께 문자를 출력한다.
+# 함수 이름 : get_bordered_str
+# 파라미터 : message
+# 반환값 : None
+# print 예시
+
+"""
+*****
+hello
+*****
+"""
+
+def get_bordered_str(message):
+    message = str(message)
+    n = len(message)
+    print("*" * n)
+    print(message)
+    print("*" * n)
+
+get_bordered_str ("hello")
+get_bordered_str (12345)
+
+
+# 속도를 변환하는 함수
+# m/s단위의 속도가 입력되면 -> km/h단위의 속도로 변환한다.
+# 함수 이름 : convert_velocity
+# 파라미터 : velocity
+# 반환값 : km/h로 변환된 속도
+
+def convert_velocity(velocity):
+    # 1초에 1m -> 1m/s
+    # 1m/s로 한 시간 동안 가면 몇 m?
+    # 1m/s * 3600(1시간)
+    # 3600m/h
+    # 1k는 몇 m? 1000m
+    # 3600m/h 는 몇 km/h?
+    # 3600m/h / 1000(1km)
+    # 1m/s ==> 3.6km/h
+    # 1m/s * 3600 / 1000 ==> 3.6km/h
+    # 초속 * 3600 / 1000 ==> 시속
+    result = velocity * 3.6
+    return result
+
+velocity = convert_velocity(10)
+print(velocity)
+
+"""
+출력 결과 n -> 4
+*
+**
+***
+****
+"""
+# 별 찍기 함수
+# 정수를 함수에 입력하여 호출하면 해당 정수 줄의 별을 화면에 출력한다.
+
+# 함수 이름 : print_stars
+# 파라미터 : n
+# 반환값 : None
+
+def print_stars(n):
+    for i in range(0, i+1):
+        print(n * "*")
+
+    for i in range(1, i+1):
+        print(i * "*")
+    
+    for i in range(n):
+        print("*" * (i + 1))
+
+print_stars(5)
+
+def print_stars(n):
+    i = 0
+    while i < n:
+        j = 0
+        while j < i+1:
+            print("*", end="")
+            j += 1
+        print()
+        i += 1
+
+# 2중 for문
+def print_stars(n):
+    for i in range(n): # 0 ~ n-1
+        for j in range(i+1): # 0 ~ i j가 중요한 게 아니라 횟수
+            print("*", end="")
+        print() # 줄바꿈
+    
+print_stars(5)
