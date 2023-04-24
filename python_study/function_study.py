@@ -82,8 +82,8 @@ def print_my_name():
 print_my_name()
 a = print_names() # 리턴이 없음 
 b = get_name() # 리턴이 있음
-print(a)
-print(b)
+print(a) # none 출력
+print(b) # 결과 출력
 
 
 
@@ -113,9 +113,141 @@ def swap_number(a, b):
     a = b
     b = temp
     print(a, b)
+    return a, b # 지역변수
+
+a = 1 
+b = 2 # 전역변수
+print("함수 호출 전", a, b)
+a, b = swap_number(a, b) 
+print("함수 호출 후", a, b)
+
+
+# 다음 함수를 정의하세요.
+# 함수 이름 : mul
+# 함수 입력값 : 정수 2개
+# 함수 출력값 : 정수 2개의 곱
+
+def mul(n1, n2):
+    return n1 * n2
+
+print(mul(1, 2))
+
+result = mul(1, 2)
+print(result)
 
 a = 1
 b = 2
-print("함수 호출 전", a, b)
-a, b = swap_number(a, b)
-print("함수 호출 후", a, b)
+c = 3
+a, b, c = 1, 2, 3
+d, e, f = [4, 5, 6]
+g, h, i = (7, 8, 9)
+
+temp = a
+a = b
+b = temp
+a, b = 1, 2
+a, b = b, a
+
+# 기본 값 매개변수
+# default value parameter
+# 함수 호출 시 n2에 입력된 값이 없으면 기본값 사용
+
+def mul(n1, n2 = 1): 
+    return n1 * n2
+
+mul(1, 2)
+mul(1)
+
+def test_func(x, test=[]):
+    test.append(x)
+    print(x, test)
+
+test_func(1)
+test_func(2) # list 지역변수
+
+# 기본값을 사용할 때 리스트를 사용하면 값이 누적된다.
+# 기본값으로 리스트를 쓰면 안 된다.
+
+def test_func1(x, test=5):
+    test = test
+    print(x, test)
+
+test_func1(1)
+test_func1(2)
+
+
+def test_func2 (x, text=None): 
+    if test == None:
+        test = [] 
+    test.append(x)
+    print(x, test)
+
+
+# 기본값이 있는 매개변수는 기본값이 없는 매개변수보다 뒤에 위치해야함
+
+def sub(n1, n2, n3):
+    print(n1 - n2 - n3)
+
+# 1 ~ 10까지 더한다.
+# *를 사용한 매개변수
+# 입력값이 몇 개가 될지 모를 때 (안 정해졌을 때)
+
+def add_many(*args):
+    # 튜플처럼 사용
+    # 인덱싱, 슬라이싱
+    result = 0
+    for i in args:
+        result += i
+    return result
+
+result1 = add_many(1, 2, 3, 4, 5)
+print(result1)
+
+result2 = add_many(3, 2, 5, 9, 1)
+print(result2)
+
+result3 = add_many(1, 2)
+print(result3)
+
+
+# 일반 매개변수랑 같이 사용 가능하다
+def calc_many(n1, *args):
+    result = n1
+    for i in args:
+        result += i
+    return n1
+
+# 키워드 매개변수
+# **kwargs
+# keyword arguments
+# 딕셔너리로 사용
+# 뒤에 들어오는 값들이 유동적일 때 사용
+
+def print_kwargs(**kwargs):
+    print(kwargs)
+
+print_kwargs(a=1, b=2)
+print_kwargs(name='이름', age=10)
+
+# 함수의 반환
+# return 반환값
+# return을 만나면 반환값을 반환함과 동시에 함수가 종료된다.
+# 함수의 반환값은 무조건 1개
+def test_func5():
+    print(1)
+    print(2)
+    return None
+    print(3)
+    print(4)
+    print(5)
+
+def test_func6(a, b):
+    # return (a + b, a * b)
+    return a + b, a * b 
+result = test_func6(1, 2)
+res_add, res_mul = test_func6(1, 2)
+# res_add, res_mul = test_func6(a+b, a*b)
+print(result)
+print(res_add, res_mul)
+
+# 개수나 용도가 정해지지 않았을 때 *, **
