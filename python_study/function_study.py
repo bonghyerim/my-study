@@ -117,5 +117,5 @@ def swap_number(a, b):
 a = 1
 b = 2
 print("함수 호출 전", a, b)
-swap_number(a, b)
+a, b = swap_number(a, b)
 print("함수 호출 후", a, b)
