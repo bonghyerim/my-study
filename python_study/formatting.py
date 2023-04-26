@@ -25,4 +25,8 @@ string1 = "Hello"
 int1 = 3
 float1 = 1.2345
 result = f"string1{string1} {int1} {float1}"
+<<<<<<< HEAD
 print(result)
+=======
+print(result)
+>>>>>>> f48234f303c930f40ba840807c773bc59c0b6c21
