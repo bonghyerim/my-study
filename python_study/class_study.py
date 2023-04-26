@@ -156,3 +156,5 @@ class Animal:
 
 class Dog(Animal):
     pass
+
+my_dog = Dog("백구")
