@@ -134,6 +134,7 @@ class Person:
         print(self.name, self.age, self.gender)
 
 
+
 print("before")
 person2 = Person("이름", 20, "남자", "010-1234-5678") # 객체가 만들어질 때 initialize, Person 객체가 초기화 되었다
 print("after")
@@ -191,3 +192,4 @@ stu3 = Student("류현진", 22, "서울대", 3)
 stu_list = [stu1, stu2, stu3]
 for stu in stu_list:
     stu.introduce()
+
