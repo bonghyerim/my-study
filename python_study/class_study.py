@@ -155,3 +155,4 @@ class Animal:
         print("")
 
 class Dog(Animal):
+    pass
