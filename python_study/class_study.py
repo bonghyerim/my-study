@@ -162,3 +162,7 @@ class Dog(Animal):
 
 my_dog = Dog("백구")
 my_dog.say()
+
+class Cat(Animal):
+    def say(self):
+        print("야옹")
