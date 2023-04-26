@@ -149,7 +149,7 @@ person2.introduce()
 class Animal:
     def __init__(self, name):
         self.name = name # self.name은 name과 다른 객체
-        print(f"{self.name}이 생성되었습니다.")
+        print(f"{self.name}가 생성되었습니다.")
 
     def say(self):
         print("")
@@ -166,3 +166,28 @@ my_dog.say()
 class Cat(Animal):
     def say(self):
         print("야옹")
+
+my_cat = Cat("나비")
+my_cat.say()
+
+class Student:
+    def __init__(self, name, age, school, grade):
+        self.name = name
+        self.age = age
+        self.school = school
+        self.grade = grade
+        # 이름, 나이, 학교, 학년을 멤버 변수로
+        # 저장하는 메소드를 정의하세요.
+    
+    def introduce(self):
+        # 이름, 나이, 학교, 학년을 print 하는
+        # 메소드를 정의하세요.
+        print(f"안녕하세요. {self.name}, 나이는 {self.age}살, 학교는 {self.school}, {self.grade}")
+
+
+stu1 = Student("홍길동", 20, "서울대", 1)
+stu2 = Student("손흥민", 21, "서울대", 2)
+stu3 = Student("류현진", 22, "서울대", 3)
+stu_list = [stu1, stu2, stu3]
+for stu in stu_list:
+    stu.introduce()
