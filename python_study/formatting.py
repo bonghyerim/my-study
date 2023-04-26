@@ -1,4 +1,4 @@
-# 문자열 포매팅 (formatting)
+# 문자열 포매팅(formatting)
 # result = str(a)+" + "+str(b)+" = "+str(a+b)
 result = "%d + %d = %d" % (3, 2, 5)
 print(result)
@@ -21,8 +21,8 @@ print("%s %d %f" % (string1, int1, float1))
 
 # f-string
 # Python 3.6 이후 버전부터 지원
-string1 =  "Hello"
+string1 = "Hello"
 int1 = 3
 float1 = 1.2345
-result = f"{string1} {int1} {float1}"
+result = f"string1{string1} {int1} {float1}"
 print(result)
