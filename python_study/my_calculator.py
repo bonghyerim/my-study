@@ -53,8 +53,4 @@ while True:
     elif operator == "3":
         mul(a, b)
     elif operator == "4":
-<<<<<<< HEAD
         div(a, b)
-=======
-        div(a, b)
->>>>>>> f48234f303c930f40ba840807c773bc59c0b6c21

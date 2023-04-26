@@ -106,11 +106,3 @@ def print_stars2(n):
 
 print_stars2(10)
 
-
-
-<<<<<<< HEAD
-=======
-
->>>>>>> f48234f303c930f40ba840807c773bc59c0b6c21
-
-
