@@ -155,6 +155,8 @@ class Animal:
         print("")
 
 class Dog(Animal):
-    pass
-
+    def say(self):
+        print("멍멍")
+        
 my_dog = Dog("백구")
+my_dog.say()
