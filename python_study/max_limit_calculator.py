@@ -8,24 +8,65 @@
 
 
 from my_calculator import MyCalculator
-my_calculator = MyCalculator()
-class calculator(MyCalculator):
-    operator = input("원하는 계산을 입력하세요: ")
-    n1 = int(input("정수 1: "))
-    n2 = int(input("정수 2: "))
-    if n1 >= 100 or n2 >= 100:
-        print("100 이하의 값만 입력하세요")
-    else:
-        if operator == "1":
-            my_calculator.add(n1, n2)
-        elif operator == "2":
-            my_calculator.sub(n1, n2)
-        elif operator == "3":
-            my_calculator.mul(n1, n2)
-        elif operator == "4":
-            if n2 == 0:
-                print("0으로 나눌 수 없습니다.")    
-            else :
-                my_calculator.div(n1, n2)
+class MaxLimitCalculator(MyCalculator):
+    def add(self, n1, n2):
+        if n1 > 100:
+            print("100보다 작은 수를 입력하세요.")
+        elif n2 > 100:
+            print("100보다 작은 수를 입력하세요.")
         else:
-                print("잘못 입력했습니다.")
+            result = n1 + n2
+            if result > 100:
+                print("계산 결과가 100보다 작아야 합니다.")
+            else:
+                print(f"{n1} + {n2} = {n1+n2}")
+    
+    
+    def sub(self, n1, n2):
+        if n1 > 100:
+            print("100보다 작은 수를 입력하세요.")
+        elif n2 > 100:
+            print("100보다 작은 수를 입력하세요.")
+        else:
+            result = n1 - n2
+            if result > 100:
+                print("계산 결과가 100보다 작아야 합니다.")
+            else:
+                print(f"{n1} - {n2} = {n1-n2}")    
+    
+    
+    def mul(self, n1, n2):
+        if n1 > 100:
+            print("100보다 작은 수를 입력하세요.")
+        elif n2 > 100:
+            print("100보다 작은 수를 입력하세요.")
+        else:
+            result = n1 * n2
+            if result > 100:
+                print("계산 결과가 100보다 작아야 합니다.")
+            else:
+                print(f"{n1} * {n2} = {n1*n2}")
+    
+    
+    def div(self, n1, n2):
+        if n1 > 100:
+            print("100보다 작은 수를 입력하세요.")
+        elif n2 > 100:
+            print("100보다 작은 수를 입력하세요.")
+        # elif n2 == 0:
+        #     print("0")
+
+        else:
+            try:
+                result = n1/n2
+            except ZeroDivisionError:
+                print("0으로 나누지 마세요.")
+            
+            result = n1 / n2
+            if result > 100:
+                print("계산 결과가 100보다 작아야 합니다.")
+            else:
+                print(f"{n1} / {n2} = {n1/n2}")
+
+my_max_limit_calculator = MaxLimitCalculator()
+my_max_limit_calculator.add(100, 200)
